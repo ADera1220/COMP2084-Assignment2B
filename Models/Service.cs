@@ -28,8 +28,6 @@ namespace WatchTowerWebApp.Models
         [Required(ErrorMessage = "Platform name is required")]
         public string Platform { get; set; }
 
-        //RenewalDate must not be marked to far into the future or past, but is not altogether required
-        [Range(typeof(DateTime), "1/6/2021", "1/1/2030")]
         public DateTime RenewalDate { get; set; }
 
         //Child navigation property with Show model

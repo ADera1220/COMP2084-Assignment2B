@@ -24,9 +24,6 @@ namespace WatchTowerWebApp.Models
         public int TotalEpisode { get; set; }
         [Range(0, 1000, ErrorMessage = "invalid entry!")]
         public int CurrentEpisode { get; set; }
-
-        //Release dates can vary, and can also be unannounced, it is not required, but cannot be too far into the future
-        [Range(typeof(DateTime), "1/6/2021", "1/1/2030", ErrorMessage = "invalid entry!")]
         public DateTime NextRelease { get; set; }
 
         //FK fields

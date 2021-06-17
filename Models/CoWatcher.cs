@@ -21,12 +21,14 @@ namespace WatchTowerWebApp.Models
         [MinLength(2, ErrorMessage = "First name cannot be less than 2 characters long")]
         [MaxLength(20, ErrorMessage="First name cannot be more than 20 characters long")]
         [Required(ErrorMessage = "First Name is required")]
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         //LastName field for CoWatcher, input validation will ensure a valid last name between 2 and 20 characters is required
         [MinLength(2, ErrorMessage = "Last name cannot be less than 2 characters long")]
         [MaxLength(20, ErrorMessage = "Last name cannot be more than 20 characters long")]
         [Required(ErrorMessage ="Last Name is required")]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
         //Child Navigation property, linking with the Show Model

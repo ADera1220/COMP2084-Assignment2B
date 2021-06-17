@@ -21,15 +21,21 @@ namespace WatchTowerWebApp.Models
 
         //the episode counts are not required, but I am limiting them to 1000 episode caps, I can't think of a show over 1000 episodes.
         [Range(0,1000, ErrorMessage = "Series must be less than 1000 episodes long")]
+        [Display(Name = "Total Episodes")]
         public int TotalEpisode { get; set; }
         [Range(0, 1000, ErrorMessage = "invalid entry!")]
+        [Display(Name = "Current Episode")]
         public int CurrentEpisode { get; set; }
+
+        [Display(Name = "Next Release")]
         public DateTime NextRelease { get; set; }
 
         //FK fields
         //I do not believe any of these fields should be required, as you can watch a show alone
         //or have a show that does not yet have a place to be watched.
+        [Display(Name = "Service")]
         public int ServiceId { get; set; }
+        [Display(Name = "CoWatcher")]
         public int CoWatcherId { get; set; }
 
         //Parent Navigation properties for the Service and CoWatcher Models

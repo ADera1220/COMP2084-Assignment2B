@@ -10,20 +10,20 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table table-striped sortable">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                <a href='#'>@Html.DisplayNameFor(model => model.Name)</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Type)
+                <a href='#'>@Html.DisplayNameFor(model => model.Type)</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Platform)
+                <a href='#'>@Html.DisplayNameFor(model => model.Platform)</a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.RenewalDate)
+                <a href='#'>@Html.DisplayNameFor(model => model.RenewalDate)</a>
             </th>
             <th></th>
         </tr>

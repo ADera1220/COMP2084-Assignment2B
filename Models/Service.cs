@@ -28,6 +28,7 @@ namespace WatchTowerWebApp.Models
         [Required(ErrorMessage = "Platform name is required")]
         public string Platform { get; set; }
 
+        [Display(Name = "Date to Renew")]
         public DateTime RenewalDate { get; set; }
 
         //Child navigation property with Show model

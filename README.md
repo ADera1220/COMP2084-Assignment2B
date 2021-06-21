@@ -6,7 +6,7 @@
 <p>The project has been created, scaffolded and stylized.</p>
 <p>The 3 Tables are:</p>
 <ul>
-  <li><h5>Shows</h5>: The main focus of this App is to track the shows, how many episodes, and the current place in the series, this table does just that</li>  
-  <li><h5>Services</h5>: Shows are found and watched in a variety of ways, tracking these servcies - be they physical or digital - is important to coordinating watching a show</li>  
-  <li><h5>CoWatchers</h5>: People like to watch shows with friends/family, allowing them to track the people they watch shows with seems like a valuable feature</li>  
+  <li><h5>Shows:</h5>The main focus of this App is to track the shows, how many episodes, and the current place in the series, this table does just that</li>  
+  <li><h5>Services:</h5>Shows are found and watched in a variety of ways, tracking these servcies - be they physical or digital - is important to coordinating watching a show</li>  
+  <li><h5>CoWatchers:</h5>People like to watch shows with friends/family, allowing them to track the people they watch shows with seems like a valuable feature</li>  
 </ul>

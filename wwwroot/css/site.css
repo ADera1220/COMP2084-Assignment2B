@@ -124,3 +124,18 @@ body {
     -moz-box-shadow: 10px 10px 5px 0px rgba(211,47,47,0.67);
     box-shadow: 10px 10px 5px 0px rgba(211,47,47,0.67);
 }
+
+.btn-danger {
+    background-color: #9E9E9E;
+    color: #D32F2F;
+    margin-bottom: 10px; 
+}
+
+.btn-backtolist {
+    color: #9E9E9E;
+}
+
+.btn-primary {
+    background-color: #D32F2F;
+    color: #9E9E9E;
+}

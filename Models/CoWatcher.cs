@@ -31,6 +31,10 @@ namespace WatchTowerWebApp.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
+        //WatchTime field is to help coordinate what day/time the person is next available to watch an episode
+        [Display(Name = "Next Watch Date")]
+        public DateTime WatchTime { get; set; }
+
         //Child Navigation property, linking with the Show Model
         public List<Show> Shows { get; set; }
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,8 @@ using WatchTowerWebApp.Models;
 
 namespace WatchTowerWebApp.Controllers
 {
+    //This section will be locked behind Authorization, with some noted exceptions
+    [Authorize()]
     public class ServicesController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -20,12 +23,16 @@ namespace WatchTowerWebApp.Controllers
         }
 
         // GET: Services
+        // This section will be authorized for non-authenticated users
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Services.ToListAsync());
         }
 
         // GET: Services/Details/5
+        // This section will be authorized for non-authenticated users
+        [AllowAnonymous]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)

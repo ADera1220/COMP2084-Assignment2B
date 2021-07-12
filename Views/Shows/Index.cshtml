@@ -6,10 +6,13 @@
 }
 
 <h1>Your Shows</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+@*Role check to decide if Create New option should be visible*@
+@if (User.IsInRole("Administrator") || User.IsInRole("AppUser"))
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+}
 <table class="table table-striped sortable">
     <thead>
         <tr>
@@ -55,11 +58,23 @@
             <td>
                 @Html.DisplayFor(modelItem => item.CoWatcher.FirstName)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
+            @*If statement checks roles
+            if user has an authorized role, the full CRUD options will be available to them
+            otherwise, the user will be limited to the detials selection*@
+            @if (User.IsInRole("Administrator") || User.IsInRole("AppUser"))
+            {
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> | 
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> | 
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            }
+            else
+            {
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                </td>
+            }
         </tr>
 }
     </tbody>

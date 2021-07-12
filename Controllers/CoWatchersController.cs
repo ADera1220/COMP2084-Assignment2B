@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WatchTowerWebApp.Data;
 using WatchTowerWebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WatchTowerWebApp.Controllers
 {
+    //This section will be locked behind Authorization, with some noted exceptions
+    [Authorize()]
     public class CoWatchersController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -20,12 +23,16 @@ namespace WatchTowerWebApp.Controllers
         }
 
         // GET: CoWatchers
+        // This section will be authorized for non-authenticated users
+        [AllowAnonymous]
         public async Task<IActionResult> Index()
         {
             return View(await _context.CoWatchers.ToListAsync());
         }
 
         // GET: CoWatchers/Details/5
+        // This section will be authorized for non-authenticated users
+        [AllowAnonymous]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)

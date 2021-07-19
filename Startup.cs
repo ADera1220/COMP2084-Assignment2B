@@ -37,6 +37,19 @@ namespace WatchTowerWebApp
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddAuthentication()
+                .AddGoogle(options =>
+                {
+                    options.ClientId = Configuration.GetSection("Authentication:Google")["ClientId"];
+                    options.ClientSecret = Configuration.GetSection("Authentication:Google")["ClientSecret"];
+                })
+                .AddFacebook(options =>
+                {
+                    options.ClientId = Configuration.GetSection("Authentication:Facebook")["AppId"];
+                    options.ClientSecret = Configuration.GetSection("Authentication:Facebook")["ClientSecret"];
+                });
+
             services.AddControllersWithViews();
         }
 

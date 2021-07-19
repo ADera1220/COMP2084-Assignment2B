@@ -129,6 +129,8 @@ namespace WatchTowerWebApp.Areas.Identity.Pages.Account
                     result = await _userManager.AddLoginAsync(user, info);
                     if (result.Succeeded)
                     {
+                        var roleResult = await _userManager.AddToRoleAsync(user, "AppUser");
+
                         _logger.LogInformation("User created an account using {Name} provider.", info.LoginProvider);
 
                         var userId = await _userManager.GetUserIdAsync(user);

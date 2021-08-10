@@ -28,7 +28,7 @@ namespace WatchTowerWebApp.Controllers
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Shows.Include(s => s.CoWatcher).Include(s => s.Service);
-            return View(await applicationDbContext.ToListAsync());
+            return View("Index", await applicationDbContext.ToListAsync());
         }
 
         // GET: Shows/Details/5
@@ -151,7 +151,7 @@ namespace WatchTowerWebApp.Controllers
                 return NotFound();
             }
 
-            return View(show);
+            return View("Delete", show);
         }
 
         // POST: Shows/Delete/5

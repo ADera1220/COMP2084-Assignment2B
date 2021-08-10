@@ -28,3 +28,15 @@
 		<p>As the deployed website functioned on localhost, and the previous Azure build was perfectly functional, the website must have been broken by OAuth implementation. This was because the App's user secrets were not uploaded to the live build. I was unable to solve this issue so I changed implementation to have the Client IDs and secrets in the appsettings.json file. The subsequent development worked flawlessly.</p>
 	</li>
 </ol>
+
+<h3>Assignment 2B</h3>
+<p>WatchTowerWebAppTests is created</p>
+<p>There are 3 tests</p>
+<ul>
+  <li><h5>Test 1:</h5> Does the "Delete" View load?</li>  
+  <li><h5>Test 2:</h5> Tests if the correct "Show" record is loaded onto the page</li>  
+  <li><h5>Test 3:</h5> If ID=null, tests if app returns NotFound()</li>  
+</ul>
+
+<h3>Issues</h3>
+<p>I struggled a bit in this assignment, mostly due to a mixup with access control and references. My main issue was a missing "public" access modifier that was not pointed out to me by Visual Studio, and required me to check backlogs every time I rebuilt the solution. I notice it was telling me that MSTEST's Discover feature wasn't finding tests because it did not have access. So I checked and noticed the missing public keyword and the system began working. </p>

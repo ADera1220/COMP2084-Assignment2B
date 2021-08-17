@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nLlV8lpnLilb3uAva4T50JIytyKC/X0wPwYP9f8YN0O++n7JWIfJF9jOyjPwb56jaTxVZWzm1eisswFZtX9QDw==",
+  "dgSpecHash": "uI5pdcVkovuW1DfFtwcNnfnrdG4AaXj2Ksp33N7g8HsUP/laeX53+YliFbjfwi0eflp+Sx2EYbmdVESVNlVKUA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adera\\source\\repos\\WatchTowerApp\\WatchTowerApp-COMP2084-Assignment\\WatchTowerWebApp.csproj",
+  "projectFilePath": "C:\\Users\\adera\\source\\repos\\WatchTowerApp-COMP2084-Assignment\\WatchTowerWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\adera\\.nuget\\packages\\azure.core\\1.17.0\\azure.core.1.17.0.nupkg.sha512",
     "C:\\Users\\adera\\.nuget\\packages\\azure.extensions.aspnetcore.configuration.secrets\\1.2.1\\azure.extensions.aspnetcore.configuration.secrets.1.2.1.nupkg.sha512",
